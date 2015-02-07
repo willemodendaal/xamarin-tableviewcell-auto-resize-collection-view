@@ -1,13 +1,12 @@
 ﻿<Properties StartupItem="testLayoutTable/testLayoutTable.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone5.8.1" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="testLayoutTable/MyCell.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="testLayoutTable/testLayoutTableViewController.cs">
     <Files>
-      <File FileName="testLayoutTable/AppDelegate.cs" Line="1" Column="1" />
-      <File FileName="testLayoutTable/testLayoutTableViewController.cs" Line="24" Column="24" />
-      <File FileName="testLayoutTable/MyCell.cs" Line="3" Column="3" />
-      <File FileName="testLayoutTable/TableDataSource.cs" Line="4" Column="4" />
-      <File FileName="testLayoutTable/MyCell.designer.cs" Line="1" Column="1" />
-      <File FileName="../TableViewCellWithAutoLayout_dotNET/VariableHeightTableCells/ItemCell.cs" Line="1" Column="1" />
+      <File FileName="testLayoutTable/testLayoutTableViewController.cs" Line="38" Column="38" />
+      <File FileName="testLayoutTable/MyCell.cs" Line="4" Column="4" />
+      <File FileName="testLayoutTable/TableDataSource.cs" Line="1" Column="1" />
+      <File FileName="testLayoutTable/CustomCollectionSource.cs" Line="11" Column="11" />
+      <File FileName="testLayoutTable/CollectionItemView.cs" Line="17" Column="17" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
