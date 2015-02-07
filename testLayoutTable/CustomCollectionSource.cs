@@ -19,7 +19,10 @@ namespace testLayoutTable
 
 		public override UICollectionViewCell GetCell (UICollectionView collectionView, NSIndexPath indexPath)
 		{
-			return (CollectionItemView)collectionView.DequeueReusableCell (CollectionItemView.Key, indexPath);
+			var cell = (CollectionItemView)collectionView.DequeueReusableCell (CollectionItemView.Key, indexPath);
+			cell.SetNeedsUpdateConstraints ();
+			cell.UpdateConstraintsIfNeeded ();
+			return cell;
 		}
 	}
 

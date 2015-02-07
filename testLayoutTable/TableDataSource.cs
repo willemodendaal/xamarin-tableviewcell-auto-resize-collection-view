@@ -24,6 +24,7 @@ namespace testLayoutTable
 			var cell = (MyCell)tableView.DequeueReusableCell (MyCell.Key);
 
 			cell.UpdateFonts ();
+			cell.DataBind (new CustomCollectionSource ());
 			cell.SetNeedsUpdateConstraints ();
 			cell.UpdateConstraintsIfNeeded ();
 

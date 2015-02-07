@@ -29,30 +29,10 @@ namespace testLayoutTable
 
 		}
 
-		private bool _addedConstraintsAlready = false;
-		/// <summary>
-		/// Step 1 - ios calculates constraints.
-		/// </summary>
-		public override void UpdateConstraints ()
+		public void DataBind (CustomCollectionSource data)
 		{
-
-			base.UpdateConstraints ();
-
-			DataBind ();
-
-			if (!_addedConstraintsAlready) {
-
-				TheCollection.RegisterNibForCell (CollectionItemView.Nib, CollectionItemView.Key);
-				_addedConstraintsAlready = true; //To ensure constraints only get added once.
-			}
-
-		
-		}
-
-		void DataBind ()
-		{
-			TheCollection.Source = new CustomCollectionSource ();
-			SetNeedsLayout (); //We need to layout again, since the data causes a physical size change.
+			TheCollection.Source = data;
+			SetNeedsUpdateConstraints ();
 		}
 
 		public void UpdateFonts()
@@ -60,6 +40,25 @@ namespace testLayoutTable
 
 		}
 
+		
+		private bool _addedConstraintsAlready = false;
+		/// <summary>
+		/// Step 1 - ios calculates constraints.
+		/// </summary>
+		public override void UpdateConstraints ()
+		{
+			
+			base.UpdateConstraints ();
+			
+			if (!_addedConstraintsAlready) {
+				
+				TheCollection.RegisterNibForCell (CollectionItemView.Nib, CollectionItemView.Key);
+				_addedConstraintsAlready = true; //To ensure constraints only get added once.
+			}
+			base.UpdateConstraints ();
+			
+		}
+		
 		/// <summary>
 		/// Step 2 - ios positions the view frames based on constraints.
 		/// </summary>
@@ -73,7 +72,7 @@ namespace testLayoutTable
 			Console.WriteLine ("LayoutSubViews. Collection contentSize is " + TheCollection.ContentSize);
 			CollHeightConstraint.Constant = TheCollection.ContentSize.Height;
 
-
+			base.LayoutSubviews ();
 		}
 	}
 }
