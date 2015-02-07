@@ -5,7 +5,7 @@ using Foundation;
 namespace testLayoutTable
 {
 	[Register("CollectionItemView")]
-	public class CollectionItemView : UICollectionViewCell
+	public partial class  CollectionItemView : UICollectionViewCell
 	{
 		public static readonly UINib Nib = UINib.FromName ("CollectionItemView", NSBundle.MainBundle);
 		public static readonly NSString Key = new NSString ("CollectionItemView");

@@ -123,6 +123,9 @@
     </Compile>
     <Compile Include="CollectionItemView.cs" />
     <Compile Include="CustomCollectionSource.cs" />
+    <Compile Include="CollectionItemView.designer.cs">
+      <DependentUpon>CollectionItemView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
