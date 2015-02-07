@@ -18,10 +18,18 @@ namespace testLayoutTable
 		UIKit.UIButton DesignerButton { get; set; }
 
 		[Outlet]
+		UIKit.NSLayoutConstraint HeightUpdatedInCode { get; set; }
+
+		[Outlet]
 		UIKit.UICollectionView TheCollection { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (CollHeightConstraint != null) {
+				CollHeightConstraint.Dispose ();
+				CollHeightConstraint = null;
+			}
+
 			if (DesignerButton != null) {
 				DesignerButton.Dispose ();
 				DesignerButton = null;
@@ -32,9 +40,9 @@ namespace testLayoutTable
 				TheCollection = null;
 			}
 
-			if (CollHeightConstraint != null) {
-				CollHeightConstraint.Dispose ();
-				CollHeightConstraint = null;
+			if (HeightUpdatedInCode != null) {
+				HeightUpdatedInCode.Dispose ();
+				HeightUpdatedInCode = null;
 			}
 		}
 	}

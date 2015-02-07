@@ -6,38 +6,48 @@
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="240" id="9WV-5k-Imc" customClass="MyCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="327" id="9WV-5k-Imc" customClass="MyCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="327"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9WV-5k-Imc" id="Ps8-wJ-lGl">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Bk2-Hu-4VT">
-                        <rect key="frame" x="13" y="13" width="294" height="300"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NVq-BU-Bnl" userLabel="SpacerContainer">
+                        <rect key="frame" x="8" y="8" width="304" height="300"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Bk2-Hu-4VT">
+                                <rect key="frame" x="5" y="5" width="294" height="290"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Zgg-ZT-aUa">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="300" id="K3I-Rz-rWi" userLabel="HeightUpdatedInCode"/>
+                            <constraint firstAttribute="bottom" secondItem="Bk2-Hu-4VT" secondAttribute="bottom" priority="900" constant="5" id="JTL-WT-f9G"/>
+                            <constraint firstItem="Bk2-Hu-4VT" firstAttribute="top" secondItem="NVq-BU-Bnl" secondAttribute="top" constant="5" id="TJp-SY-De8"/>
+                            <constraint firstAttribute="height" constant="300" id="UAk-PP-jaL"/>
+                            <constraint firstItem="Bk2-Hu-4VT" firstAttribute="leading" secondItem="NVq-BU-Bnl" secondAttribute="leading" constant="5" id="a6r-vC-xAl"/>
+                            <constraint firstAttribute="trailing" secondItem="Bk2-Hu-4VT" secondAttribute="trailing" constant="5" id="dcM-vP-dVo"/>
                         </constraints>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Zgg-ZT-aUa">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                    </collectionView>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" red="1" green="0.92523886730000005" blue="0.77255834619999997" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
-                    <constraint firstItem="Bk2-Hu-4VT" firstAttribute="leading" secondItem="Ps8-wJ-lGl" secondAttribute="leadingMargin" constant="5" id="XTD-fI-Grf"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="Bk2-Hu-4VT" secondAttribute="trailing" constant="5" id="eHi-w7-vnl"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="Bk2-Hu-4VT" secondAttribute="bottom" priority="900" constant="5" id="o6f-hY-hnV"/>
-                    <constraint firstItem="Bk2-Hu-4VT" firstAttribute="top" secondItem="Ps8-wJ-lGl" secondAttribute="topMargin" constant="5" id="wwg-Wm-ZBr"/>
+                    <constraint firstItem="NVq-BU-Bnl" firstAttribute="top" secondItem="Ps8-wJ-lGl" secondAttribute="topMargin" id="b9S-nO-iKn"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="NVq-BU-Bnl" secondAttribute="trailing" id="bpK-P3-Mcp"/>
+                    <constraint firstItem="NVq-BU-Bnl" firstAttribute="leading" secondItem="Ps8-wJ-lGl" secondAttribute="leadingMargin" id="hcC-kY-piQ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="NVq-BU-Bnl" secondAttribute="bottom" priority="900" id="mFO-Ii-NAQ"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="CollHeightConstraint" destination="K3I-Rz-rWi" id="xur-ey-N4H"/>
+                <outlet property="HeightUpdatedInCode" destination="UAk-PP-jaL" id="RVt-3W-Z8M"/>
                 <outlet property="TheCollection" destination="Bk2-Hu-4VT" id="UJQ-Se-n3V"/>
             </connections>
-            <point key="canvasLocation" x="243" y="530"/>
+            <point key="canvasLocation" x="243" y="573.5"/>
         </tableViewCell>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
     </objects>
