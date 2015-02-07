@@ -25,8 +25,6 @@ namespace testLayoutTable
 
 			cell.UpdateFonts ();
 			cell.DataBind (new CustomCollectionSource ());
-			cell.SetNeedsUpdateConstraints ();
-			cell.UpdateConstraintsIfNeeded ();
 
 			return cell;
 		}

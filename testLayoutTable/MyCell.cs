@@ -47,7 +47,7 @@ namespace testLayoutTable
 		/// </summary>
 		public override void UpdateConstraints ()
 		{
-			
+			Console.WriteLine ("Table UpdateConstraints. My height is " + this.Bounds.Height);
 			base.UpdateConstraints ();
 			
 			if (!_addedConstraintsAlready) {
@@ -58,21 +58,24 @@ namespace testLayoutTable
 			base.UpdateConstraints ();
 			
 		}
-		
+
+		int previousCollHeight = 0;
 		/// <summary>
 		/// Step 2 - ios positions the view frames based on constraints.
 		/// </summary>
 		public override void LayoutSubviews ()
 		{
 			base.LayoutSubviews ();
+			Console.WriteLine ("Table LayoutSubViews. Collection contentSize is " + TheCollection.ContentSize);
 
 			this.ContentView.TranslatesAutoresizingMaskIntoConstraints = true; //Keep this default for tableCells, as per https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/AdoptingAutoLayout/AdoptingAutoLayout.html
 
-			TheCollection.TranslatesAutoresizingMaskIntoConstraints = false;
-			Console.WriteLine ("LayoutSubViews. Collection contentSize is " + TheCollection.ContentSize);
-			CollHeightConstraint.Constant = TheCollection.ContentSize.Height;
+			if (TheCollection.ContentSize.Height > 0 && TheCollection.ContentSize.Height != previousCollHeight) {
+				TheCollection.TranslatesAutoresizingMaskIntoConstraints = false;
+				CollHeightConstraint.Constant = TheCollection.ContentSize.Height;
+				this.ContentView.SetNeedsUpdateConstraints ();
+			}
 
-			base.LayoutSubviews ();
 		}
 	}
 }
