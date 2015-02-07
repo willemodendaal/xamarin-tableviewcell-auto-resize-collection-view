@@ -47,7 +47,8 @@ namespace testLayoutTable
 		/// </summary>
 		public override void UpdateConstraints ()
 		{
-			Console.WriteLine ("Table UpdateConstraints. My height is " + this.Bounds.Height);
+			Console.WriteLine ("Table UpdateConstraints. My height is " + this.ContentView.Bounds.Height 
+				+ " and that height constraint is " + CollHeightConstraint.Constant);
 			base.UpdateConstraints ();
 			
 			if (!_addedConstraintsAlready) {
