@@ -7,7 +7,10 @@ namespace testLayoutTable
 	[Register("CollectionItemView")]
 	public class CollectionItemView : UICollectionViewCell
 	{
-		public CollectionItemView ()
+		public static readonly UINib Nib = UINib.FromName ("CollectionItemView", NSBundle.MainBundle);
+		public static readonly NSString Key = new NSString ("CollectionItemView");
+
+		public CollectionItemView (IntPtr handle) : base(handle)
 		{
 		}
 	}

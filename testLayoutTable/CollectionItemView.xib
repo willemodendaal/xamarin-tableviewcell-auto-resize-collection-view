@@ -6,7 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalCompressionResistancePriority="1000" id="6fS-8F-1PR">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalCompressionResistancePriority="1000" id="6fS-8F-1PR" customClass="CollectionItemView">
             <rect key="frame" x="0.0" y="0.0" width="200" height="40"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -25,7 +25,7 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
-            <color key="backgroundColor" red="1" green="0.92523886730000005" blue="0.77255834619999997" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.65781849100000001" green="1" blue="0.63575408529999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="weZ-ug-vEg" secondAttribute="trailing" constant="10" id="899-zA-lgE"/>
                 <constraint firstAttribute="bottom" secondItem="weZ-ug-vEg" secondAttribute="bottom" constant="8" id="Fjd-p1-yxX"/>
