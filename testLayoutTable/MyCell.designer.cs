@@ -13,12 +13,20 @@ namespace testLayoutTable
 	{
 		[Outlet]
 		UIKit.UIButton DesignerButton { get; set; }
+
+		[Outlet]
+		UIKit.UICollectionView TheCollection { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
 			if (DesignerButton != null) {
 				DesignerButton.Dispose ();
 				DesignerButton = null;
+			}
+
+			if (TheCollection != null) {
+				TheCollection.Dispose ();
+				TheCollection = null;
 			}
 		}
 	}

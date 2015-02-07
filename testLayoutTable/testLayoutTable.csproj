@@ -103,6 +103,7 @@
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
     <InterfaceDefinition Include="MainStoryboard.storyboard" />
     <InterfaceDefinition Include="EOAScheduleCell.xib" />
+    <InterfaceDefinition Include="CollectionItemView.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -120,6 +121,7 @@
     <Compile Include="MyCell.designer.cs">
       <DependentUpon>MyCell.cs</DependentUpon>
     </Compile>
+    <Compile Include="CollectionItemView.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
