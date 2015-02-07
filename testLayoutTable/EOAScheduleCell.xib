@@ -29,7 +29,7 @@
                 <constraints>
                     <constraint firstItem="Bk2-Hu-4VT" firstAttribute="leading" secondItem="Ps8-wJ-lGl" secondAttribute="leadingMargin" constant="5" id="XTD-fI-Grf"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Bk2-Hu-4VT" secondAttribute="trailing" constant="5" id="eHi-w7-vnl"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="Bk2-Hu-4VT" secondAttribute="bottom" constant="5" id="o6f-hY-hnV"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Bk2-Hu-4VT" secondAttribute="bottom" priority="900" constant="5" id="o6f-hY-hnV"/>
                     <constraint firstItem="Bk2-Hu-4VT" firstAttribute="top" secondItem="Ps8-wJ-lGl" secondAttribute="topMargin" constant="5" id="wwg-Wm-ZBr"/>
                 </constraints>
             </tableViewCellContentView>
