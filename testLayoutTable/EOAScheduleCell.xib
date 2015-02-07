@@ -34,6 +34,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="CollHeightConstraint" destination="K3I-Rz-rWi" id="xur-ey-N4H"/>
                 <outlet property="TheCollection" destination="Bk2-Hu-4VT" id="UJQ-Se-n3V"/>
             </connections>
             <point key="canvasLocation" x="243" y="471.5"/>

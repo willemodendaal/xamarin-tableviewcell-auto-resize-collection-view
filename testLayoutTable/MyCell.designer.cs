@@ -12,6 +12,9 @@ namespace testLayoutTable
 	partial class MyCell
 	{
 		[Outlet]
+		UIKit.NSLayoutConstraint CollHeightConstraint { get; set; }
+
+		[Outlet]
 		UIKit.UIButton DesignerButton { get; set; }
 
 		[Outlet]
@@ -27,6 +30,11 @@ namespace testLayoutTable
 			if (TheCollection != null) {
 				TheCollection.Dispose ();
 				TheCollection = null;
+			}
+
+			if (CollHeightConstraint != null) {
+				CollHeightConstraint.Dispose ();
+				CollHeightConstraint = null;
 			}
 		}
 	}

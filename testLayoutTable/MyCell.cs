@@ -46,11 +46,13 @@ namespace testLayoutTable
 				_addedConstraintsAlready = true; //To ensure constraints only get added once.
 			}
 
+		
 		}
 
 		void DataBind ()
 		{
 			TheCollection.Source = new CustomCollectionSource ();
+			SetNeedsLayout (); //We need to layout again, since the data causes a physical size change.
 		}
 
 		public void UpdateFonts()
@@ -66,6 +68,10 @@ namespace testLayoutTable
 			base.LayoutSubviews ();
 
 			this.ContentView.TranslatesAutoresizingMaskIntoConstraints = true; //Keep this default for tableCells, as per https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/AdoptingAutoLayout/AdoptingAutoLayout.html
+
+			TheCollection.TranslatesAutoresizingMaskIntoConstraints = false;
+			CollHeightConstraint.Constant = TheCollection.ContentSize.Height;
+
 
 		}
 	}
