@@ -13,10 +13,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="200" height="40"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Em-0J-AmA">
+                    <view contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="6Em-0J-AmA">
                         <rect key="frame" x="0.0" y="0.0" width="200" height="40"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Single Collection Cell" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weZ-ug-vEg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Single Collection Cell" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weZ-ug-vEg">
                                 <rect key="frame" x="5" y="5" width="190" height="30"/>
                                 <color key="backgroundColor" red="0.65781849100000001" green="1" blue="0.63575408529999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -39,7 +39,7 @@
             </view>
             <color key="backgroundColor" red="0.65781849100000001" green="1" blue="0.63575408529999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="6Em-0J-AmA" secondAttribute="trailing" id="7Gl-9N-Msi"/>
+                <constraint firstAttribute="trailing" secondItem="6Em-0J-AmA" secondAttribute="trailing" priority="900" id="7Gl-9N-Msi"/>
                 <constraint firstItem="6Em-0J-AmA" firstAttribute="leading" secondItem="6fS-8F-1PR" secondAttribute="leading" id="NpG-kF-IEN"/>
                 <constraint firstAttribute="bottom" secondItem="6Em-0J-AmA" secondAttribute="bottom" id="X0K-bk-Fkn"/>
                 <constraint firstItem="6Em-0J-AmA" firstAttribute="top" secondItem="6fS-8F-1PR" secondAttribute="top" id="ZXg-4u-Xnw"/>
