@@ -28,6 +28,8 @@ namespace testLayoutTable
 
 			TableView.RegisterNibForCellReuse (MyCell.Nib, MyCell.Key);
 			TableView.DataSource = new TableDataSource ();
+			TableView.RowHeight = UITableView.AutomaticDimension;
+			TableView.EstimatedRowHeight = 50;
 		}
 
 		public override void ViewWillAppear (bool animated)
@@ -38,6 +40,7 @@ namespace testLayoutTable
 		public override void ViewDidAppear (bool animated)
 		{
 			base.ViewDidAppear (animated);
+			TableView.ReloadData ();
 		}
 
 		public override void ViewWillDisappear (bool animated)

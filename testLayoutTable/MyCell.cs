@@ -26,7 +26,6 @@ namespace testLayoutTable
 
 		void CreateView ()
 		{
-
 		}
 
 		public void DataBind (CustomCollectionSource data)
@@ -52,7 +51,8 @@ namespace testLayoutTable
 			base.UpdateConstraints ();
 			
 			if (!_addedConstraintsAlready) {
-				
+				TheCollection.ScrollEnabled = false;
+
 				TheCollection.RegisterNibForCell (CollectionItemView.Nib, CollectionItemView.Key);
 				_addedConstraintsAlready = true; //To ensure constraints only get added once.
 			}
@@ -78,12 +78,15 @@ namespace testLayoutTable
 				TheCollection.TranslatesAutoresizingMaskIntoConstraints = false;
 				HeightUpdatedInCode.Constant = TheCollection.ContentSize.Height;
 				previousCollHeight = TheCollection.ContentSize.Height;
-				//this.SetNeedsUpdateConstraints ();
-				this.SetNeedsLayout ();
-				//this.UpdateConstraintsIfNeeded ();
+
+				this.SetNeedsUpdateConstraints ();
+				//this.SetNeedsLayout ();
+				this.UpdateConstraintsIfNeeded ();
 			}
 
+		
 		}
+
 	}
 }
 

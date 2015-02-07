@@ -14,7 +14,7 @@ namespace testLayoutTable
 
 		public override nint GetItemsCount (UICollectionView collectionView, nint section)
 		{
-			return 6;
+			return 19;
 		}
 
 		public override UICollectionViewCell GetCell (UICollectionView collectionView, NSIndexPath indexPath)

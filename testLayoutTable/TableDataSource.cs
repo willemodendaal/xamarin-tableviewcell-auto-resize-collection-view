@@ -16,7 +16,7 @@ namespace testLayoutTable
 
 		public override nint RowsInSection (UITableView tableView, nint section)
 		{
-			return 1;
+			return 3;
 		}
 
 		public override UITableViewCell GetCell (UITableView tableView, Foundation.NSIndexPath indexPath)
@@ -28,6 +28,8 @@ namespace testLayoutTable
 
 			return cell;
 		}
+
+
 	}
 }
 
