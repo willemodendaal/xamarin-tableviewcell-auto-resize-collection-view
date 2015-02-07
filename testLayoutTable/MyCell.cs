@@ -70,6 +70,7 @@ namespace testLayoutTable
 			this.ContentView.TranslatesAutoresizingMaskIntoConstraints = true; //Keep this default for tableCells, as per https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/AdoptingAutoLayout/AdoptingAutoLayout.html
 
 			TheCollection.TranslatesAutoresizingMaskIntoConstraints = false;
+			Console.WriteLine ("LayoutSubViews. Collection contentSize is " + TheCollection.ContentSize);
 			CollHeightConstraint.Constant = TheCollection.ContentSize.Height;
 
 
