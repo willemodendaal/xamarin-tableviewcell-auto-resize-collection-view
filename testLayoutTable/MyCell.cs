@@ -66,14 +66,18 @@ namespace testLayoutTable
 		public override void LayoutSubviews ()
 		{
 			base.LayoutSubviews ();
-			Console.WriteLine ("Table LayoutSubViews. Collection contentSize is " + TheCollection.ContentSize);
+			Console.WriteLine ("Table LayoutSubViews. Collection CONTENTSize is " + TheCollection.ContentSize 
+				+ " and my size is " + this.Bounds.Height);
 
 			this.ContentView.TranslatesAutoresizingMaskIntoConstraints = true; //Keep this default for tableCells, as per https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/AdoptingAutoLayout/AdoptingAutoLayout.html
 
+			//Only update height if its different, to prevent inifnite loop with updateConstraints.
 			if (TheCollection.ContentSize.Height > 0 && TheCollection.ContentSize.Height != previousCollHeight) {
+				Console.WriteLine ("Changing the height constraint to TheCollection.ContentSize.Height and requesting another updateConstraints.");
 				TheCollection.TranslatesAutoresizingMaskIntoConstraints = false;
 				CollHeightConstraint.Constant = TheCollection.ContentSize.Height;
-				this.ContentView.SetNeedsUpdateConstraints ();
+				this.SetNeedsUpdateConstraints ();
+				this.UpdateConstraintsIfNeeded ();
 			}
 
 		}
