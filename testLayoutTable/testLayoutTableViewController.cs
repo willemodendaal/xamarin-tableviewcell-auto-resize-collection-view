@@ -40,6 +40,8 @@ namespace testLayoutTable
 		public override void ViewDidAppear (bool animated)
 		{
 			base.ViewDidAppear (animated);
+
+			Console.WriteLine ("About to reload data...");
 			TableView.ReloadData ();
 		}
 

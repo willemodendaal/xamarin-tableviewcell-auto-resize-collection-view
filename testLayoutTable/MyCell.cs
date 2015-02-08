@@ -21,6 +21,7 @@ namespace testLayoutTable
 
 		public MyCell(IntPtr handle) : base(handle)
 		{
+			Console.WriteLine ("Cell instantiated.");
 			CreateView ();
 		}
 
@@ -30,6 +31,7 @@ namespace testLayoutTable
 
 		public void DataBind (CustomCollectionSource data)
 		{
+			Console.WriteLine ("Cell.collection data source set again.");
 			TheCollection.Source = data;
 			SetNeedsUpdateConstraints ();
 		}
